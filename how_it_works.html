@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar Example</title>
+    
+    <!-- الروابط -->
+    <link rel="stylesheet" href="how_it_works.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <title>Navbar Example</title>
+</head>
+<body>
+    <section id="Moocy">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
+            <div class="container-fluid px-3">
+                <!-- Logo -->
+                <a class="navbar-brand fw-bold text-primary" href="index.html">Moocy</a>
+
+                <!-- Toggle Button - shown only on mobile -->
+                <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Main Navbar Content - shown only on desktop -->
+                <div class="collapse navbar-collapse d-none d-lg-flex">
+                    <!-- Icons Navigation -->
+                    <div class="nav-icons-container mx-auto">
+                        <a class="nav-icon" href="#" title="News Feed">
+                            <i class="fas fa-newspaper"></i>
+                            <span>News feed</span>
+                        </a>
+                        <div class="dropdown">
+                            <a class="nav-icon dropdown" href="#" id="educationDropdown" data-bs-toggle="dropdown" title="Education">
+                                <i class="fas fa-graduation-cap"></i>
+                                <span>Education</span>
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="educationDropdown">
+                                <li><a class="dropdown-item" href="courses.html"><i class="fas fa-book"></i> Courses</a></li>
+                                <li><a class="dropdown-item" href="#"><i class="fas fa-certificate"></i> Diploma</a></li>
+                                <li><a class="dropdown-item" href="#"><i class="fas fa-chalkboard"></i> Workshops</a></li>
+                            </ul>
+                        </div>
+                        <a class="nav-icon" href="how_it_works.html" title="How It Works">
+                            <i class="fas fa-cogs"></i>
+                            <span>How it works</span>
+                        </a>
+                        <a class="nav-icon" href="tools.html" title="Tools">
+                            <i class="fas fa-tools"></i>
+                            <span>Tools and models</span>
+                        </a>
+                        <a class="nav-icon" href="#" title="Startup">
+                            <i class="fas fa-rocket"></i>
+                            <span>Startup Incubator</span>
+                        </a>
+                        <a class="nav-icon" href="mentors.html" title="Mentors">
+                            <i class="fas fa-users"></i>
+                            <span>Mentors and advisors</span>
+                        </a>
+                        <a class="nav-icon" href="reports.html" title="Reports">
+                            <i class="fas fa-chart-bar"></i>
+                            <span>Reports and insights</span>
+                        </a>
+                        <a class="nav-icon" href="library.html" title="Reports">
+                            <i class="fas fa-book"></i>
+                            <span>Library</span>
+                        </a>
+                        <a class="nav-icon" href="moocy-filter.html" title="Reports">
+                            <i class="fas fa-filter"></i>
+                            <span>Moocy Finder</span>
+                        </a>
+                    </div>
+
+                    <!-- Right Side Buttons -->
+                    <div class="d-flex align-items-center">
+                        <!-- Language Switcher -->
+                        <div class="language-switcher dropdown">
+                            <button class="language-btn dropdown-toggle" data-bs-toggle="dropdown">
+                                <img src="https://flagcdn.com/w20/us.png" alt="English">
+                                <span>EN</span>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#" data-lang="en"><img src="https://flagcdn.com/w20/us.png" alt="English"> EN</a></li>
+                                <li><a class="dropdown-item" href="#" data-lang="ar"><img src="https://flagcdn.com/w20/sa.png" alt="Arabic"> AR</a></li>
+                                <li><a class="dropdown-item" href="#" data-lang="fr"><img src="https://flagcdn.com/w20/fr.png" alt="French"> FR</a></li>
+                                <li><a class="dropdown-item" href="#" data-lang="es"><img src="https://flagcdn.com/w20/es.png" alt="Spanish"> ES</a></li>
+                            </ul>
+                        </div>
+
+                        <a href="sign-in.html" class="ms-2">
+                            <button class="btn btn-outline-primary btn-icon rounded-pill">
+                                <i class="fas fa-sign-in-alt"></i>
+                                <span>Log in</span>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Offcanvas Sidebar - shown only on mobile -->
+                <div class="offcanvas offcanvas-end d-lg-none" tabindex="-1" id="offcanvasNavbar">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title">Menu</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <!-- Vertical Navigation -->
+                        <div class="sidebar-nav">
+                            <a class="nav-link" href="#">
+                                <i class="fas fa-newspaper"></i>
+                                <span>News Feed</span>
+                            </a>
+                            
+                            <div class="dropdown">
+                                <a class="nav-link dropdown" href="#" id="sidebarEducation" data-bs-toggle="dropdown">
+                                    <i class="fas fa-graduation-cap"></i>
+                                    <span>Education</span>
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="sidebarEducation">
+                                    <li><a class="dropdown-item" href="courses.html"><i class="fas fa-book"></i> Courses</a></li>
+                                    <li><a class="dropdown-item" href="#"><i class="fas fa-certificate"></i> Diploma</a></li>
+                                    <li><a class="dropdown-item" href="#"><i class="fas fa-chalkboard"></i> Workshops</a></li>
+                                </ul>
+                            </div>
+                            
+                            <a class="nav-link" href="how_it_works.html">
+                                <i class="fas fa-cogs"></i>
+                                <span>How It Works</span>
+                            </a>
+                            
+                            <a class="nav-link" href="tools.html">
+                                <i class="fas fa-tools"></i>
+                                <span>Tools and models</span>
+                            </a>
+                            
+                            <a class="nav-link" href="#">
+                                <i class="fas fa-rocket"></i>
+                                <span>Startup incubator</span>
+                            </a>
+                            
+                            <a class="nav-link" href="mentors.html">
+                                <i class="fas fa-users"></i>
+                                <span>Mentors</span>
+                            </a>
+                            
+                            <a class="nav-link" href="reports.html">
+                                <i class="fas fa-chart-bar"></i>
+                                <span>Reports and insights</span>
+                            </a>
+
+                            <a class="nav-link" href="moocy-filter.html">
+                                <i class="fas fa-filter"></i>
+                                <span>Moocy Finder</span>
+                            </a>
+                        </div>
+
+                        <!-- Buttons -->
+                        <div class="d-flex flex-column gap-2 mt-4">
+                            <div class="language-switcher dropdown">
+                                <button class="btn btn-outline-secondary dropdown-toggle w-100" data-bs-toggle="dropdown">
+                                    <img src="https://flagcdn.com/w20/us.png" alt="English" style="width: 20px; height: 16px; margin-right: 6px;">
+                                    <span>English (EN)</span>
+                                </button>
+                                <ul class="dropdown-menu w-100">
+                                    <li><a class="dropdown-item" href="#" data-lang="en"><img src="https://flagcdn.com/w20/us.png" alt="English"> English</a></li>
+                                    <li><a class="dropdown-item" href="#" data-lang="ar"><img src="https://flagcdn.com/w20/sa.png" alt="Arabic"> العربية</a></li>
+                                    <li><a class="dropdown-item" href="#" data-lang="fr"><img src="https://flagcdn.com/w20/fr.png" alt="French"> Français</a></li>
+                                    <li><a class="dropdown-item" href="#" data-lang="es"><img src="https://flagcdn.com/w20/es.png" alt="Spanish"> Español</a></li>
+                                </ul>
+                            </div>
+
+                            <a href="sign-in.html">
+                                <button class="btn btn-outline-primary" style="width: 96%; margin-left: 11px;">
+                                    <i class="fas fa-sign-in-alt me-2"></i> Log in
+                                </button>
+                            </a>
+                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </section>
+
+    <!-- FAQs Section -->
+    <div class="wrapper">
+        <h1 class="title">  How It Works </h1>
+        <div class="faq">
+            <button class="accordion">
+                1. What is Moocy.com?
+                <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="pannel">
+                <p>Moocy.com is a digital platform designed to support civil society, cultural organizations, and youth-led initiatives by providing tools, resources, education, and networking opportunities in one place.</p>
+            </div>
+        </div>
+        <div class="faq">
+            <button class="accordion">
+                2. Who can use Moocy.com?
+                <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="pannel">
+                <p>Anyone interested in civil society work—including youth, NGOs, cultural leaders, entrepreneurs, and educators—can benefit from Moocy’s resources and services.</p>
+            </div>
+        </div>
+        <div class="faq">
+            <button class="accordion">
+                3. What services does Moocy offer?
+                <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="pannel">
+                <p>Moocy provides:
+                    <br>
+
+        1- Online workshops, courses, and diplomas
+        <br>
+
+        2-Job and funding opportunities (Moocy Finder)
+        <br>
+
+        3-Access to reports, statistics, and insights
+        <br>
+
+        4-Mentorship and advisory services
+        <br>
+
+        5-Digital tools and templates
+        <br>
+
+        6-A business incubator for social entrepreneurs.</p>
+            </div>
+        </div>
+        <div class="faq">
+            <button class="accordion">
+                4. Is the platform free to use?
+                <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="pannel">
+                <p>Many services are free, especially educational content. Some advanced features like premium workshops or access to certain research reports may be paid to ensure platform sustainability.</p>
+            </div>
+        </div>
+        <div class="faq">
+            <button class="accordion">
+                5. How do I apply for a course or workshop?
+                <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="pannel">
+                <p>You can browse available courses from the Education section and register directly through the platform. You’ll receive confirmation by email.</p>
+            </div>
+        </div>
+        <div class="faq">
+            <button class="accordion">
+                6. What kind of jobs or internships are listed?
+                <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="pannel">
+                <p>Moocy focuses on job opportunities in the civil society sector such as community outreach, project management, fundraising, training, and more—both remote and on-site.</p>
+            </div>
+        </div>
+        <div class="faq">
+            <button class="accordion">
+                7. How does the incubation program work?
+                <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="pannel">
+                <p>The Social Entrepreneurship Incubator is a 4-month program that supports innovative ideas by providing mentorship, training, and networking to young changemakers.</p>
+            </div>
+        </div>
+        <div class="faq">
+            <button class="accordion">
+                8. What is the Moocy Finder?
+                <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="pannel">
+                        <p>Moocy Finder is a smart search tool that allows users to explore:
+                            <br>
+
+        Job listings
+        <br>
+
+        Funding opportunities
+        <br>
+
+        Partner organizations
+        <br>
+
+        Investment and collaboration leads</p>
+            </div>
+        </div>
+        <div class="faq">
+            <button class="accordion">
+                9. Is the platform available in different languages?
+                <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="pannel">
+                <p>Currently, the primary language is English. We are working on adding Arabic and other regional languages to increase accessibility.</p>
+            </div>
+        </div>
+        <div class="faq">
+            <button class="accordion">
+                10. How does Moocy support gender inclusion?
+                <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="pannel">
+                <p>Moocy actively promotes gender-inclusive participation by providing remote learning options and advocating for women’s access to training and leadership programs.</p>
+            </div>
+        </div>
+        <div class="faq">
+            <button class="accordion">
+                11. How can I become a mentor or advisor?
+                <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="pannel">
+                <p>If you’re an expert in the civil society or cultural field, you can apply to be a mentor by filling out the form in the Mentor & Advisor section.</p>
+            </div>
+        </div>
+        <div class="faq">
+            <button class="accordion">
+                12. Can I access reports and research?
+                <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="pannel">
+                <p>Yes. The Reports & Insights section provides access to sectoral studies, data analysis, and civil society performance reports.</p>
+            </div>
+        </div>
+        <div class="faq">
+            <button class="accordion">
+                13. What is the long-term vision of Moocy?
+                <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="pannel">
+                <p>Our goal is to digitally empower youth and civil society organizations, encourage social innovation, and become a self-sustaining ecosystem supporting learning, employment, and transformation across the MENA region.</p>
+            </div>
+        </div>
+    </div>
+    
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-row">
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul class="ul-footer">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Our Services</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Affiliate Program</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Get Help</h4>
+                    <ul class="ul-footer">
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Shipping</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">Order Status</a></li>
+                        <li><a href="#">Payment Options</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul class="ul-footer">
+                        <li><a href="#">Tools</a></li>
+                        <li><a href="#">Courses</a></li>
+                        <li><a href="#">Mentors</a></li>
+                        <li><a href="#">Library</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="how_it_works.js"></script>
+</body>
+</html>

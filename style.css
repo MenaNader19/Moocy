@@ -1,0 +1,470 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar Styles */
+.navbar {
+    height: 85px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    font-size: 2rem;
+    transition: all 0.3s ease;
+}
+
+/* Nav Links with Icons - Main Nav */
+.nav-icons-container {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.nav-icon {
+    color: #333;
+    transition: all 0.2s ease;
+    padding: 8px;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    text-decoration: none !important;
+}
+
+.nav-icon i {
+    font-size: 1.2rem;
+    margin-bottom: 4px;
+}
+
+.nav-icon span {
+    font-size: 0.55rem;
+    display: block;
+    color: #555;
+}
+
+.nav-icon:hover {
+    color: var(--primary-color);
+    background-color: rgba(13, 110, 253, 0.1);
+}
+
+.nav-icon:hover span {
+    color: var(--primary-color);
+}
+
+/* Sidebar Styles */
+.offcanvas {
+    width: 280px !important;
+}
+
+.offcanvas-body {
+    padding: 15px;
+}
+
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.sidebar-nav .nav-link {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    border-radius: 6px;
+    color: #333;
+    text-decoration: none !important;
+}
+
+.sidebar-nav .nav-link:hover {
+    background-color: rgba(13, 110, 253, 0.1);
+    color: var(--primary-color);
+}
+
+.sidebar-nav .nav-link i {
+    font-size: 1.2rem;
+    width: 30px;
+    text-align: center;
+    margin-right: 10px;
+}
+
+.sidebar-nav .dropdown-menu {
+    border: none;
+    box-shadow: none;
+    margin: 5px 0 5px 30px;
+    padding-left: 10px;
+    border-left: 1px solid #eee;
+}
+
+.sidebar-nav .dropdown-item {
+    padding: 8px 15px !important;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar-nav .dropdown-item i {
+    font-size: 1rem;
+    width: 25px;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+    border: none !important;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px !important;
+    padding: 6px 0;
+}
+
+.dropdown-item {
+    font-size: 0.85rem;
+    padding: 8px 12px !important;
+    border-radius: 5px !important;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none !important;
+}
+
+.dropdown-item i {
+    font-size: 1rem;
+}
+
+.dropdown-item:hover {
+    background-color: rgba(13, 110, 253, 0.1);
+    color: var(--primary-color) !important;
+}
+
+/* Language Switcher */
+.language-switcher {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-left: 12px;
+}
+
+.language-btn {
+    background: none;
+    border: none;
+    padding: 6px;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    text-decoration: none !important;
+}
+
+.language-btn:hover {
+    background-color: rgba(13, 110, 253, 0.1);
+}
+
+.language-btn img {
+    width: 16px;
+    height: 16px;
+}
+/* Buttons */
+.btn-icon {
+    padding: 8px 12px !important;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* Navbar Toggler */
+.navbar-toggler {
+    padding: 0.35rem;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+}
+
+
+/* Landing Section Styles */
+.landing {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    background-color: #0093E9;
+    background-image: linear-gradient(160deg, #0093E9 0%, #2c66b8 50%);
+    text-align: center;
+    padding: 20px;
+}
+
+.landing h2 {
+    font-size: 2.5rem;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.landing p {
+    font-size: 1.2rem;
+    color: white;
+    margin-bottom: 30px;
+}
+
+.landing button {
+    border-radius: 50px;
+    background-color: transparent;
+    border: 2px solid white;
+    padding: 10px 30px;
+    font-size: 1.2rem;
+    color: white;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.landing button:hover {
+    background-color: white;
+    color: #24262b;
+}
+
+
+/*banner*/
+/* Banner Slider Styles */
+#bannerSlider {
+    height: 100vh;
+    overflow: hidden;
+}
+
+#bannerSlider .carousel-inner,
+#bannerSlider .carousel-item,
+#bannerSlider .carousel-item img {
+    height: 100%;
+    width: 100%;
+    background-size:contain ;
+}
+
+#bannerSlider .carousel-caption {
+    bottom: 30%;
+    text-align: center;
+}
+
+#bannerSlider .carousel-caption h2 {
+    font-size: 2.5rem;
+    color: white;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+#bannerSlider .carousel-caption button {
+    border-radius: 50px;
+    background-color: transparent;
+    border: 2px solid white;
+    padding: 10px 30px;
+    font-size: 1.2rem;
+    color: white;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#bannerSlider .carousel-caption button:hover {
+    background-color: white;
+    color: #24262b;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 5%;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+}
+  
+/* Cards Section */
+.title {
+    display: flex;
+    justify-content: center;
+    color: #3a6cf4;
+    font-size: 2.2em;
+    font-weight: 800;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card {
+    background-color: white;
+    width: calc(25% - 40px);
+    box-shadow: 0.5px 25px rgba(1, 1, 1, 0.15);
+    border-radius: 20px;
+    padding: 25px;
+    margin: 15px;
+    transition: transform 0.7s ease;
+}
+
+.card:hover {
+    transform: scale(1.1);
+}
+
+.icon {
+    color: #3a6cf4;
+    font-size: 5em;
+    text-align: center;
+}
+
+.information {
+    text-align: center;
+}
+
+.information h3 {
+    color: #3a6cf4;
+    font-size: 1.2em;
+    font-weight: 700;
+    margin: 10px;
+}
+
+li a:hover{
+    color: #2C66B8;
+}
+
+
+/* About Site Section */
+.title-site {
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: 2.2em;
+    font-weight: 800;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    padding-top: 20px;
+}
+
+#about-site {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    background-color: #0093E9;
+    background-image: linear-gradient(160deg, #0093E9 0%, #2c66b8 50%);
+
+}
+
+.icon-site {
+    color: black;
+    font-size: 5em;
+    text-align: center;
+}
+
+.card-site {
+    background-color: transparent;
+    width: 20em;
+    padding: 25px;
+    margin: 15px;
+}
+.icon-site img{
+    max-width: 300px;
+}
+
+/* Footer */
+.footer-container {
+    max-width: 1170px;
+    margin: auto;
+}
+
+.footer-row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.ul-footer {
+    list-style: none;
+}
+
+.footer {
+    background-color: #2C66B8;
+    padding: 70px 0;
+}
+
+.footer-col {
+    width: 25%;
+    padding: 0 15px;
+}
+
+.footer-col h4 {
+    font-size: 18px;
+    color: #ffffff;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+}
+
+.footer-col h4::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: #e91e63;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+}
+
+.footer-col ul li:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 300;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+    color: #ffffff;
+    padding-left: 8px;
+}
+
+.footer-col .social-links a {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #ffffff;
+    transition: all 0.5s ease;
+}
+
+.footer-col .social-links a:hover {
+    color: #24262b;
+    background-color: #ffffff;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .card {
+        width: calc(50% - 40px);
+    }
+    .footer-col {
+        width: 50%;
+    }
+}
+
+@media (max-width: 1024px) {
+    .card {
+        width: 100%;
+    }
+    .footer-col {
+        width: 100%;
+    }
+}

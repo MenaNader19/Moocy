@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <title>Navbar Example</title>
+</head>
+<body>
+    <section id="Moocy">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
+            <div class="container-fluid px-3">
+                <!-- Logo -->
+                <a class="navbar-brand fw-bold text-primary" href="index.html">Moocy</a>
+
+                <!-- Toggle Button - shown only on mobile -->
+                <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Main Navbar Content - shown only on desktop -->
+                <div class="collapse navbar-collapse d-none d-lg-flex">
+                    <!-- Icons Navigation -->
+                    <div class="nav-icons-container mx-auto">
+                        <a class="nav-icon" href="#" title="News Feed">
+                            <i class="fas fa-newspaper"></i>
+                            <span>News feed</span>
+                        </a>
+                        <div class="dropdown">
+                            <a class="nav-icon dropdown" href="#" id="educationDropdown" data-bs-toggle="dropdown" title="Education">
+                                <i class="fas fa-graduation-cap"></i>
+                                <span>Education</span>
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="educationDropdown">
+                                <li><a class="dropdown-item" href="courses.html"><i class="fas fa-book"></i> Courses</a></li>
+                                <li><a class="dropdown-item" href="#"><i class="fas fa-certificate"></i> Diploma</a></li>
+                                <li><a class="dropdown-item" href="#"><i class="fas fa-chalkboard"></i> Workshops</a></li>
+                            </ul>
+                        </div>
+                        <a class="nav-icon" href="how_it_works.html" title="How It Works">
+                            <i class="fas fa-cogs"></i>
+                            <span>How it works</span>
+                        </a>
+                        <a class="nav-icon" href="tools.html" title="Tools">
+                            <i class="fas fa-tools"></i>
+                            <span>Tools and models</span>
+                        </a>
+                        <a class="nav-icon" href="#" title="Startup">
+                            <i class="fas fa-rocket"></i>
+                            <span>Startup Incubator</span>
+                        </a>
+                        <a class="nav-icon" href="mentors.html" title="Mentors">
+                            <i class="fas fa-users"></i>
+                            <span>Mentors and advisors</span>
+                        </a>
+                        <a class="nav-icon" href="reports.html" title="Reports">
+                            <i class="fas fa-chart-bar"></i>
+                            <span>Reports and insights</span>
+                        </a>
+                        <a class="nav-icon" href="library.html" title="Reports">
+                            <i class="fas fa-book"></i>
+                            <span>Library</span>
+                        </a>
+                        <a class="nav-icon" href="moocy-filter.html" title="Reports">
+                            <i class="fas fa-filter"></i>
+                            <span>Moocy Filter</span>
+                        </a>
+                    </div>
+
+                    <!-- Right Side Buttons -->
+                    <div class="d-flex align-items-center">
+                        <!-- Language Switcher -->
+                        <div class="language-switcher dropdown">
+                            <button class="language-btn dropdown-toggle" data-bs-toggle="dropdown">
+                                <img src="https://flagcdn.com/w20/us.png" alt="English">
+                                <span>EN</span>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#" data-lang="en"><img src="https://flagcdn.com/w20/us.png" alt="English"> EN</a></li>
+                                <li><a class="dropdown-item" href="#" data-lang="ar"><img src="https://flagcdn.com/w20/sa.png" alt="Arabic"> AR</a></li>
+                                <li><a class="dropdown-item" href="#" data-lang="fr"><img src="https://flagcdn.com/w20/fr.png" alt="French"> FR</a></li>
+                                <li><a class="dropdown-item" href="#" data-lang="es"><img src="https://flagcdn.com/w20/es.png" alt="Spanish"> ES</a></li>
+                            </ul>
+                        </div>
+
+                        <a href="sign-in.html" class="ms-2">
+                            <button class="btn btn-outline-primary btn-icon rounded-pill">
+                                <i class="fas fa-sign-in-alt"></i>
+                                <span>Log in</span>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Offcanvas Sidebar - shown only on mobile -->
+                <div class="offcanvas offcanvas-end d-lg-none" tabindex="-1" id="offcanvasNavbar">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title">Menu</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <!-- Vertical Navigation -->
+                        <div class="sidebar-nav">
+                            <a class="nav-link" href="#">
+                                <i class="fas fa-newspaper"></i>
+                                <span>News Feed</span>
+                            </a>
+                            
+                            <div class="dropdown">
+                                <a class="nav-link dropdown" href="#" id="sidebarEducation" data-bs-toggle="dropdown">
+                                    <i class="fas fa-graduation-cap"></i>
+                                    <span>Education</span>
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="sidebarEducation">
+                                    <li><a class="dropdown-item" href="courses.html"><i class="fas fa-book"></i> Courses</a></li>
+                                    <li><a class="dropdown-item" href="#"><i class="fas fa-certificate"></i> Diploma</a></li>
+                                    <li><a class="dropdown-item" href="#"><i class="fas fa-chalkboard"></i> Workshops</a></li>
+                                </ul>
+                            </div>
+                            
+                            <a class="nav-link" href="how_it_works.html">
+                                <i class="fas fa-cogs"></i>
+                                <span>How It Works</span>
+                            </a>
+                            
+                            <a class="nav-link" href="tools.html">
+                                <i class="fas fa-tools"></i>
+                                <span>Tools and models</span>
+                            </a>
+                            
+                            <a class="nav-link" href="#">
+                                <i class="fas fa-rocket"></i>
+                                <span>Startup incubator</span>
+                            </a>
+                            
+                            <a class="nav-link" href="mentors.html">
+                                <i class="fas fa-users"></i>
+                                <span>Mentors</span>
+                            </a>
+                            
+                            <a class="nav-link" href="reports.html">
+                                <i class="fas fa-chart-bar"></i>
+                                <span>Reports and insights</span>
+                            </a>
+
+                            <a class="nav-link" href="moocy-filter.html">
+                                <i class="fas fa-filter"></i>
+                                <span>Moocy Finder</span>
+                            </a>
+                        </div>
+
+                        <!-- Buttons -->
+                        <div class="d-flex flex-column gap-2 mt-4">
+                            <div class="language-switcher dropdown">
+                                <button class="btn btn-outline-secondary dropdown-toggle w-100" data-bs-toggle="dropdown">
+                                    <img src="https://flagcdn.com/w20/us.png" alt="English" style="width: 20px; height: 16px; margin-right: 6px;">
+                                    <span>English (EN)</span>
+                                </button>
+                                <ul class="dropdown-menu w-100">
+                                    <li><a class="dropdown-item" href="#" data-lang="en"><img src="https://flagcdn.com/w20/us.png" alt="English"> English</a></li>
+                                    <li><a class="dropdown-item" href="#" data-lang="ar"><img src="https://flagcdn.com/w20/sa.png" alt="Arabic"> العربية</a></li>
+                                    <li><a class="dropdown-item" href="#" data-lang="fr"><img src="https://flagcdn.com/w20/fr.png" alt="French"> Français</a></li>
+                                    <li><a class="dropdown-item" href="#" data-lang="es"><img src="https://flagcdn.com/w20/es.png" alt="Spanish"> Español</a></li>
+                                </ul>
+                            </div>
+
+                            <a href="sign-in.html">
+                                <button class="btn btn-outline-primary" style="width: 96%; margin-left: 11px;">
+                                    <i class="fas fa-sign-in-alt me-2"></i> Log in
+                                </button>
+                            </a>
+                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </section>
+
+    
+    <!-- Banner -->
+        <!-- Banner Slider -->
+    <div id="bannerSlider" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="image_1.jpg"  style="width: 100%; height: 100%;" alt="Slide 1">
+                <div class="carousel-caption">
+                    <h2>1st Service</h2>
+                    <h2>platform in MENA region</h2>
+                    <a href="sign-in.html">
+                        <button class="btn btn-outline-light">Join Now</button>
+                    </a>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="image_2.jpg" class="d-block w-100" style="padding-top: 60px; " alt="Slide 2">
+                <div class="carousel-caption">
+                    <h2>Learn New Skills</h2>
+                    <h2>With Our Experts</h2>
+                    <a href="sign-in.html">
+                        <button class="btn btn-outline-light">Join Now</button>
+                    </a>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="image_3.jpg" class="d-block w-100"style="padding-top: 88px"; alt="Slide 3">
+                <div class="carousel-caption">
+                    <h2>Find Your Dream Job</h2>
+                    <h2>With Our Partners</h2>
+                    <a href="sign-in.html">
+                        <button class="btn btn-outline-light">Join Now</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#bannerSlider" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#bannerSlider" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <!-- Services -->
+    <section class="cards" id="services">
+        <h2 class="title">Services</h2>
+        <div class="content">
+            <div class="card">
+                <a href="mentors.html" style="text-decoration: none;">
+                    <div class="icon">
+                    <i class="fa-solid fa-user" aria-label="Mentors"></i>
+                </div>
+                <div class="information">
+                    <h3>Mentors</h3>
+                    <p style="color: black;">You will find trustworthy mentors to guide you in your career.</p>
+                </div>
+                </a>
+                
+            </div>
+            
+            <div class="card">
+                <a href="courses.html" style="text-decoration: none;">
+                    <div class="icon">
+                    <i class="fa-solid fa-laptop" aria-label="Courses"></i>
+                </div>
+                <div class="information">
+                    <h3>Courses</h3>
+                    <p style="color: black;">Enhance your career with online courses in various fields.</p>
+                </div>
+                </a>
+                
+            </div>
+            <div class="card">
+                <a href="tools.html" style="text-decoration: none;">
+                    <div class="icon">
+                    <i class="fa-solid fa-screwdriver-wrench" aria-label="Tools"></i>
+                </div>
+                <div class="information">
+                    <h3>Tools</h3>
+                    <p style="color: black;">Discover tools to increase your productivity and learn how to use them.</p>
+                </div>
+                </a>
+                
+            </div>
+            <div class="card">
+                <a href="moocy-filter.html" style="text-decoration: none;">
+                    <div class="icon">
+                    <i class="fa-solid fa-building" aria-label="moocy-filter"></i>
+                </div>
+                <div class="information">
+                    <h3>Moocy Filter</h3>
+                    <p style="color: black;">Find great opportunities to work with socially inclusive organizations.</p>
+                </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Site -->
+    <section class="cards" id="about-site">
+        <h2 class="title-site">Moocy will be useful for</h2>
+        <div class="content">
+            <div class="card-site">
+                <div class="icon-site" style="color: white;">
+                    <i class="fa-solid fa-magnifying-glass" aria-label="Job Seekers"></i>
+                </div>
+                <div class="information">
+                    <p style="color: white;">For anyone looking to find a job.</p>
+                </div>
+            </div>
+            <div class="card-site">
+                <div class="icon-site" style="color: white;">
+                    <i class="fa-solid fa-lightbulb" aria-label="Learners"></i>
+                </div>
+                <div class="information">
+                    <p style="color: white;">For anyone wanting to learn in the field of social inclusion.</p>
+                </div>
+            </div>
+            <div class="card-site">
+                <div class="icon-site" style="color: white;">
+                    <i class="fa-solid fa-user-tie" aria-label="Mentorship Seekers"></i>
+                </div>
+                <div class="information">
+                    <p style="color: white;">For anyone seeking guidance from great mentors.</p>
+                </div>
+            </div>
+            <div class="card-site">
+                <div class="icon-site" style="color: white;">
+                    <i class="fa-solid fa-chart-line" aria-label="Productivity Seekers"></i>
+                </div>
+                <div class="information">
+                    <p style="color: white;">For anyone wanting to increase productivity with effective tools.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Join Us -->
+    <section class="cards" id="join">
+        <h2 class="title">JOIN US WITH OUR PARTNERS</h2>
+        <div class="content">
+            <div class="card-site">
+                <div class="icon-site">
+                    <img src="european_solidarity_corps_logo.jpg" alt="" class="img">
+                </div>
+            </div>
+            <div class="card-site">
+                <div class="icon-site">
+                    <img src="logo-2.png" alt="" style="max-height: 140px;">
+                </div>
+            </div>
+           
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-row">
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul class="ul-footer">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Our Services</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Affiliate Program</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Get Help</h4>
+                    <ul class="ul-footer">
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Shipping</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">Order Status</a></li>
+                        <li><a href="#">Payment Options</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul class="ul-footer">
+                        <li><a href="#">Tools</a></li>
+                        <li><a href="#">Courses</a></li>
+                        <li><a href="#">Mentors</a></li>
+                        <li><a href="#">Library</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-kQtW33rZJAHjgefvhyyzcGFfhUnIEYZnr6zO5eZcAq6aOympR81NQTs90pdkRtP" crossorigin="anonymous"></script>
+
+    
+    
+</body>
+</html>
